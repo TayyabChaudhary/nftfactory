@@ -2,9 +2,16 @@ import assets from "@/assets";
 import Head from "next/head";
 import Image from "next/image";
 import Link from "next/link";
-import React from "react";
+import React,{useState} from "react";
 
 export default function LoginAccount() {
+  const [password, setpassword] = useState('');
+  const [showPassword, setshowPassword] = useState(false);
+
+
+  const togglePasswordVisible = () => {
+    setshowPassword(prev => !prev);
+  }
   return (
     <>
       <Head>
@@ -12,12 +19,12 @@ export default function LoginAccount() {
       </Head>
 
       {/* =========== Code Start Here ======= */}
-      <section className="flex 2xl:flex-row xl:flex-row md:flex-row lg:flex-row flex-col gap-6 w-full">
+      <section className="flex 2xl:flex-row xl:flex-row md:flex-row lg:flex-row  flex-col-reverse gap-6 w-full">
         <div className="w-full h-full">
           <Image
             src={assets.login__image}
             alt=""
-            className="w-full min-h-screen object-cover"
+            className="w-full 2xl:min-h-screen xl:min-h-screen md:min-h-screen lg:min-h-screen h-[300px] 2xl:object-cover xl:object-cover md:object-cover lg:object-cover object-contain"
           />
         </div>
         <div className="flex-grow w-full mt-5">
@@ -44,13 +51,18 @@ export default function LoginAccount() {
               <label htmlFor="" className="text-[#333050]">
                 Email
               </label>
+              <div className="relative">
+              <div className="absolute top-6 right-3">
+                  <Image src={assets.message__icon} alt="" />
+                </div>
               <input
                 type="text"
                 id="email"
-                className="bg-gray-50 py-3 px-4 mt-3 w-full text-gray-900 text-sm rounded-lg outline-none"
+                className="bg-gray-50 py-3 px-4 mt-3 w-full text-gray-900 text-sm rounded-lg outline-none border-none"
                 placeholder="Your Email"
                 required
               />
+              </div>
             </div>
 
             <div className="relative mb-6">
@@ -61,12 +73,12 @@ export default function LoginAccount() {
                 Password
               </label>
               <div className="realtive">
-                <div className="absolute top-11 right-3">
-                  <Image src={assets.eye__icon} alt="" />
+              <div className="absolute top-11 right-3">
+                  <Image src={assets.eye__icon} alt="" onClick={togglePasswordVisible} />
                 </div>
                 <input
-                  type="password"
-                  className="w-full bg-gray-50 rounded h-11 outline-none text-sm pl-4 mt-1"
+                  type={showPassword ?'text' :"password"}
+                  className="w-full bg-gray-50 rounded h-11 outline-none text-sm pl-4 mt-1 border-none"
                   placeholder="********"
                 />
               </div>
@@ -98,7 +110,7 @@ export default function LoginAccount() {
             </button>
           </form>
 
-          <div className="flex justify-center items-center w-full mt-4">
+          <div className="flex justify-center items-center w-full mt-20">
             <span>
               Create an Account
               <Link

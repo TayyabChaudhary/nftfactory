@@ -2,9 +2,21 @@ import assets from "@/assets";
 import Head from "next/head";
 import Image from "next/image";
 import Link from "next/link";
-import React from "react";
+import React,{useState} from "react";
 
 export default function Signup() {
+  const [password, setpassword] = useState('');
+  const [showPassword, setshowPassword] = useState(false);
+  const [showConfirmPassword, setshowConfirmPassword] = useState(false);
+
+
+  const togglePasswordVisible = () => {
+    setshowPassword(prev => !prev);
+  }
+
+  const showConfrmPasswordVisible = () => {
+    setshowConfirmPassword(prev => !prev);
+  }
   return (
     <>
       <Head>
@@ -14,7 +26,7 @@ export default function Signup() {
       {/* =========== Code Start Here ======= */}
       <section className="flex 2xl:flex-row xl:flex-row md:flex-row lg:flex-row flex-col gap-6 w-full">
 
-        <div className="flex-grow w-full mt-5 p-5">
+        <div className="flex-grow w-full mt-5 2xl:p-5 xl:p-5 md:p-5 lg:p-5 p-2">
           <div className="flex justify-center">
             <div className="w-[150px] h-[60px] flex justify-center items-center rounded-full bg-white shadow-md border border-solid border-purple-300">
               <Image src={assets.person__image} alt="" className="w-10 h-10" />
@@ -40,11 +52,11 @@ export default function Signup() {
               </label>
               <div className="realtive">
                 <div className="absolute top-10 right-3">
-                  <Image src={assets.user__icon} alt="" />
+                  <Image src={assets.profile_blue} alt="" />
                 </div>
                 <input
                   type="password"
-                  className="w-full bg-gray-50 rounded h-11 outline-none text-sm pl-4 mt-1"
+                  className="w-full bg-gray-50 rounded h-11 outline-none text-sm pl-4 mt-1 border-none"
                   placeholder="Enter Full Name"
                 />
               </div>
@@ -59,7 +71,7 @@ export default function Signup() {
                 </div>
                 <input
                   type="email"
-                  className="w-full bg-gray-50 rounded h-11 outline-none text-sm pl-4 mt-1"
+                  className="w-full bg-gray-50 rounded h-11 outline-none text-sm pl-4 mt-1 border-none"
                   placeholder="Your Email"
                 />
               </div>
@@ -73,11 +85,11 @@ export default function Signup() {
               </label>
               <div className="realtive">
                 <div className="absolute top-11 right-3">
-                  <Image src={assets.eye__icon} alt="" />
+                  <Image src={assets.eye__icon} alt="" onClick={togglePasswordVisible} />
                 </div>
                 <input
-                  type="password"
-                  className="w-full bg-gray-50 rounded h-11 outline-none text-sm pl-4 mt-1"
+                  type={showPassword ? "text" : "password"}
+                  className="w-full bg-gray-50 rounded h-11 outline-none text-sm pl-4 mt-1 border-none"
                   placeholder="********"
                 />
               </div>
@@ -91,11 +103,11 @@ export default function Signup() {
               </label>
               <div className="realtive">
                 <div className="absolute top-11 right-3">
-                  <Image src={assets.eye__icon} alt="" />
+                  <Image src={assets.eye__icon} alt="" onClick={showConfrmPasswordVisible} />
                 </div>
                 <input
-                  type="password"
-                  className="w-full bg-gray-50 rounded h-11 outline-none text-sm pl-4 mt-1"
+                  type={showConfirmPassword ? "text" : "password"}
+                  className="w-full bg-gray-50 rounded h-11 outline-none text-sm pl-4 mt-1 border-none"
                   placeholder="********"
                 />
               </div>
@@ -127,7 +139,7 @@ export default function Signup() {
             </button>
           </form>
 
-          <div className="flex justify-center items-center w-full mt-4">
+          <div className="flex justify-center items-center w-full mt-8">
             <span>
               Already have an Account
               <Link href={`/LoginAccount/LoginAccount`} className="text-[#6B43FB] hover:underline pl-2">
@@ -137,7 +149,7 @@ export default function Signup() {
           </div>
         </div>
         <div className="w-full h-full">
-          <Image src={assets.login__image} alt="" className="w-full min-h-screen object-cover" />
+          <Image src={assets.register__image} alt="" className="w-full 2xl:h-[900px] xl:h-[900px] md:min-h-screen lg:min-h-screen h-[300px] 2xl:object-cover xl:object-cover md:object-cover lg:object-cover object-contain isolate"/>
         </div>
       </section>
     </>

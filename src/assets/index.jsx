@@ -1,4 +1,5 @@
 import LoginPoster from "./images/others/Poster.png";
+import RegisterPoster from "./images/others/Poster2.png";
 import PersonIcon from "./images/svg/Person.svg";
 import SheildCheck from "./images/svg/ShieldCheck.svg";
 import SMSIcon from "./images/svg/sms.svg";
@@ -12,8 +13,11 @@ import UserIcon from "./images/svg/profile.svg";
 import LogoutIcon from "./images/svg/logout.svg";
 import SecondBoxIcon from "./images/svg/box2.svg";
 import AddIcon from "./images/svg/add.svg";
+import ProfilesIcon from "./images/svg/profiles.svg";
+
 const assets = {
     'login__image': LoginPoster,
+    'register__image':RegisterPoster,
     'person__image': PersonIcon,
     'sheild__check': SheildCheck,
     'message__icon': SMSIcon,
@@ -26,7 +30,8 @@ const assets = {
     'user__icon': UserIcon,
     'logout__icon':LogoutIcon,
     'second__box__icon': SecondBoxIcon,
-    'add__icon': AddIcon
+    'add__icon': AddIcon,
+    'profile_blue':ProfilesIcon
 }
 
 
