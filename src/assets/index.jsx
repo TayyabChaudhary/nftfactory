@@ -14,6 +14,7 @@ import LogoutIcon from "./images/svg/logout.svg";
 import SecondBoxIcon from "./images/svg/box2.svg";
 import AddIcon from "./images/svg/add.svg";
 import ProfilesIcon from "./images/svg/profiles.svg";
+import CraditIcon from "./images/svg/cradit.svg";
 
 const assets = {
     'login__image': LoginPoster,
@@ -31,7 +32,8 @@ const assets = {
     'logout__icon':LogoutIcon,
     'second__box__icon': SecondBoxIcon,
     'add__icon': AddIcon,
-    'profile_blue':ProfilesIcon
+    'profile_blue':ProfilesIcon,
+    'cradit__icon':CraditIcon
 }
 
 

@@ -1,9 +1,15 @@
 import assets from "@/assets";
 import Head from "next/head";
 import Image from "next/image";
+import Link from "next/link";
+import { useRouter } from "next/router";
 import React from "react";
 
 export default function ForgotPassword() {
+
+  const router = useRouter();
+
+ 
   return (
     <>
       <Head>
@@ -37,9 +43,9 @@ export default function ForgotPassword() {
                     </div>
                     <input type="text" className="w-full bg-[#3330500D] rounded h-14 outline-none text-sm pl-4 mt-3" placeholder="Your Email" />
                 </div>
-                <button className="p-4 w-full rounded-md uppercase text-sm mt-8 bg-[#151247] text-white">
-                    Reset Password now
-                </button>
+                <div className="p-4 w-full rounded-md uppercase text-sm tracking-wider mt-8 bg-[#151247] text-white text-center">
+                  <Link href={`/NewPassword/NewPassword`}>Reset Password now</Link>
+                </div>
             </form>
           </div>
         </div>

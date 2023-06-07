@@ -148,8 +148,8 @@ export default function Signup() {
             </span>
           </div>
         </div>
-        <div className="w-full h-full">
-          <Image src={assets.register__image} alt="" className="w-full 2xl:h-[900px] xl:h-[900px] md:min-h-screen lg:min-h-screen h-[300px] 2xl:object-cover xl:object-cover md:object-cover lg:object-cover object-contain isolate"/>
+        <div className="w-full">
+          <Image src={assets.register__image} alt="" className="w-full 2xl:h-[900px] xl:h-[900px] md:min-h-screen lg:min-h-screen h-[500px]"/>
         </div>
       </section>
     </>

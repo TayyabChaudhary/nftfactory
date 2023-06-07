@@ -2,6 +2,7 @@ import Head from 'next/head'
 import React from 'react'
 import assets from "@/assets";
 import Image from "next/image";
+import Link from 'next/link';
 export default function NewPassword() {
   return (
     <>
@@ -48,9 +49,11 @@ export default function NewPassword() {
                     <input type="text" className="w-full bg-[#3330500D] rounded h-14 outline-none text-sm pl-4 mt-2" placeholder="Your Email" />
                 </div>
                 </div>
-                <button className="p-4 w-full rounded-md uppercase text-sm mt-8 bg-[#151247] text-white">
+                <div className="p-4 w-full rounded-md uppercase text-sm mt-8 bg-[#151247] text-white text-center">
+                    <Link href={`/MyAccount/MyAccount`}>
                     Reset Password now
-                </button>
+                    </Link>
+                </div>
             </form>
           </div>
         </div>

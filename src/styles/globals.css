@@ -11,6 +11,11 @@
 
 }
 
+@font-face {
+    font-family: 'havelrica';
+    src: url('../assets/fonts/font/HelveticaNowDisplay-Bold.ttf');
+}
+
 *,
 ::before,
 ::after {
@@ -54,4 +59,9 @@ td {
 
 .forgot__pass{
     background-image: url('../assets/images/others/Net.png');
+}
+
+
+h1{
+    font-family: 'havelrica';
 }

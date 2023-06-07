@@ -24,7 +24,7 @@ export default function LoginAccount() {
           <Image
             src={assets.login__image}
             alt=""
-            className="w-full 2xl:min-h-screen xl:min-h-screen md:min-h-screen lg:min-h-screen h-[300px] 2xl:object-cover xl:object-cover md:object-cover lg:object-cover object-contain"
+            className="w-full 2xl:min-h-screen xl:min-h-screen md:min-h-screen lg:min-h-screen h-[300px] 2xl:object-cover xl:object-cover md:object-cover lg:object-cover object-cover"
           />
         </div>
         <div className="flex-grow w-full mt-5">
@@ -101,9 +101,9 @@ export default function LoginAccount() {
                   Remember me
                 </label>
               </div>
-              <span className="text-sm text-[#6B43FB] cursor-pointer hover:underline">
+              <Link href={`/ForgotPassword/ForgotPassword`} className="text-sm text-[#6B43FB] cursor-pointer hover:underline">
                 Forgot Password
-              </span>
+              </Link>
             </div>
             <button className="w-full h-14 rounded-lg text-white mt-4 bg-[#151247]">
               SUBMIT

@@ -3,7 +3,7 @@ import React from "react";
 export default function ShippingAddress() {
   return (
     <>
-      <h1 className="text-2xl">Shipping Address</h1>
+      <h1 className="text-2xl mt-3">Billing Address</h1>
 
       <form autoComplete="off">
         <div className="grid gap-6 mb-6 md:grid-cols-2 mt-8">

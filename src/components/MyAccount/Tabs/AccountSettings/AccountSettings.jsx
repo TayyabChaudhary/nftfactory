@@ -4,7 +4,7 @@ import React from "react";
 
 export default function AccountSettings() {
   return (
-    <div>
+    <div className="p-9 pt-0">
       <h1 className="text-2xl">Profile Settings</h1>
 
       <form autoComplete="off">

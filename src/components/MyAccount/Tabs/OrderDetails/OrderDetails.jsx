@@ -3,11 +3,12 @@ import Image from "next/image";
 import React, { useState } from "react";
 
 export default function OrderDetails() {
-  const [first, setfirst] = useState(false);
+  const [first, setfirst] = useState(true);
   const [showDetails, setshowDetails] = useState(false);
 
   const showOrderDetails = () => {
-    setfirst(true);
+    setfirst(false);
+    setshowDetails(true);
   };
   return (
     <>
@@ -32,83 +33,80 @@ export default function OrderDetails() {
             </button>
           </div>
         </div>
-      ) : (
-        <>
-          <div class="relative overflow-x-auto">
-            <table class="w-full text-sm text-left text-gray-500">
-              <thead class="text-xs text-gray-700 uppercase bg-gray-50">
-                <tr>
-                  <th scope="col" class="px-6 py-3">
-                   Order
-                  </th>
-                  <th scope="col" class="px-6 py-3">
-                    Date
-                  </th>
-                  <th scope="col" class="px-6 py-3">
-                    Status
-                  </th>
-                  <th scope="col" class="px-6 py-3">
-                    Price
-                  </th>
-                  <th scope="col" class="px-6 py-3">
-                    
-                  </th>
-                </tr>
-              </thead>
-              <tbody>
-                <tr class="bg-white">
-                  <th
-                    scope="row"
-                    class="px-6 py-4 font-medium text-[#6B43FB] whitespace-nowrap"
-                  >
-                   #678
-                  </th>
-                  <td class="px-6 py-4">24-Sep</td>
-                  <td class="px-6 py-4 text-red-600">Cancelled</td>
-                  <td class="px-6 py-4">$125</td>
-                  <td class="px-6 py-4">
-                    <button className="text-white text-sm bg-[#6B43FB] rounded-lg px-4 py-2 tracking-wider">
-                        View Details
-                    </button>
-                  </td>
-                </tr>
-                <tr class="bg-white">
-                  <th
-                    scope="row"
-                    class="px-6 py-4 font-medium text-[#6B43FB] whitespace-nowrap"
-                  >
-                    #678
-                  </th>
-                  <td class="px-6 py-4">24-Sep</td>
-                  <td class="px-6 py-4 text-green-500">Completed</td>
-                  <td class="px-6 py-4">$125</td>
-                  <td class="px-6 py-4">
-                    <button className="text-white text-sm bg-[#6B43FB] rounded-lg px-4 py-2 tracking-wider">
-                        View Details
-                    </button>
-                  </td>
-                </tr>
-                <tr class="bg-white">
-                  <th
-                    scope="row"
-                    class="px-6 py-4 font-medium text-[#6B43FB] whitespace-nowrap"
-                  >
-                    #678
-                  </th>
-                  <td class="px-6 py-4">24-Sep</td>
-                  <td class="px-6 py-4 text-yellow-400">Processsing</td>
-                  <td class="px-6 py-4">$125</td>
-                  <td class="px-6 py-4">
-                    <button className="text-white text-sm bg-[#6B43FB] rounded-lg px-4 py-2 tracking-wider">
-                        View Details
-                    </button>
-                  </td>
-                </tr>
-              </tbody>
-            </table>
-          </div>
-        </>
-      )}
+      ) : null}
+      {showDetails ? (
+        <div class="relative overflow-x-auto">
+          <table class="w-full text-sm text-left text-gray-500">
+            <thead class="text-xs text-gray-700 uppercase bg-gray-50">
+              <tr>
+                <th scope="col" class="px-6 py-3">
+                  Order
+                </th>
+                <th scope="col" class="px-6 py-3">
+                  Date
+                </th>
+                <th scope="col" class="px-6 py-3">
+                  Status
+                </th>
+                <th scope="col" class="px-6 py-3">
+                  Price
+                </th>
+                <th scope="col" class="px-6 py-3"></th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr class="bg-white">
+                <th
+                  scope="row"
+                  class="px-6 py-4 font-medium text-[#6B43FB] whitespace-nowrap"
+                >
+                  #678
+                </th>
+                <td class="px-6 py-4">24-Sep</td>
+                <td class="px-6 py-4 text-red-600">Cancelled</td>
+                <td class="px-6 py-4">$125</td>
+                <td class="px-6 py-4">
+                  <button className="text-white text-sm bg-[#6B43FB] rounded-lg px-4 py-2 tracking-wider">
+                    View Details
+                  </button>
+                </td>
+              </tr>
+              <tr class="bg-white">
+                <th
+                  scope="row"
+                  class="px-6 py-4 font-medium text-[#6B43FB] whitespace-nowrap"
+                >
+                  #678
+                </th>
+                <td class="px-6 py-4">24-Sep</td>
+                <td class="px-6 py-4 text-green-500">Completed</td>
+                <td class="px-6 py-4">$125</td>
+                <td class="px-6 py-4">
+                  <button className="text-white text-sm bg-[#6B43FB] rounded-lg px-4 py-2 tracking-wider">
+                    View Details
+                  </button>
+                </td>
+              </tr>
+              <tr class="bg-white">
+                <th
+                  scope="row"
+                  class="px-6 py-4 font-medium text-[#6B43FB] whitespace-nowrap"
+                >
+                  #678
+                </th>
+                <td class="px-6 py-4">24-Sep</td>
+                <td class="px-6 py-4 text-yellow-400">Processsing</td>
+                <td class="px-6 py-4">$125</td>
+                <td class="px-6 py-4">
+                  <button className="text-white text-sm bg-[#6B43FB] rounded-lg px-4 py-2 tracking-wider">
+                    View Details
+                  </button>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      ) : null}
     </>
   );
 }
