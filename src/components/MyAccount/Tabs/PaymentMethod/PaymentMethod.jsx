@@ -6,7 +6,7 @@ export default function PaymentMethod() {
   const [showPaymentDetails, setshowPaymentDetails] = useState(false);
   return (
     <>
-      <p className="text-sm">
+      <p className="text-sm text-center">
         The following Payment Method will be used on the checkout page by
         default.
       </p>

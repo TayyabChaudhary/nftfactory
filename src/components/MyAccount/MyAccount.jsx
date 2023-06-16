@@ -79,7 +79,7 @@ export default function MyAccount() {
             </div>
           </div>
           <div className="flex justify-center pt-3">
-            <p className="text-center 2xl:text-base xl:text-base md:text-base lg:text-base text-xs">
+            <p className="text-center 2xl:text-base xl:text-base md:text-base lg:text-base text-xs p-8">
               Welcome to your personal account page for our ecommerce store!
               Here, you have complete <br /> control over your shopping
               experience.
