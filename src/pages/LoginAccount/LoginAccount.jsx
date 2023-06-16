@@ -19,12 +19,12 @@ export default function LoginAccount() {
       </Head>
 
       {/* =========== Code Start Here ======= */}
-      <section className="flex 2xl:flex-row xl:flex-row md:flex-row lg:flex-row  flex-col-reverse gap-6 w-full">
+      <section className="flex 2xl:flex-row xl:flex-row md:flex-col-reverse lg:flex-col-reverse  flex-col-reverse gap-6 w-full">
         <div className="w-full h-full">
           <Image
             src={assets.login__image}
             alt=""
-            className="w-full 2xl:min-h-screen xl:min-h-screen md:min-h-screen lg:min-h-screen h-[300px] 2xl:object-cover xl:object-cover md:object-cover lg:object-cover object-cover"
+            className="w-full 2xl:min-h-screen xl:min-h-screen md:h-[600px] lg:h-[600px] h-[300px] 2xl:object-cover xl:object-cover md:object-cover lg:object-cover object-cover"
           />
         </div>
         <div className="flex-grow w-full mt-5">

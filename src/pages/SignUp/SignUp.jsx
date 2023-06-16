@@ -24,7 +24,7 @@ export default function Signup() {
       </Head>
 
       {/* =========== Code Start Here ======= */}
-      <section className="flex 2xl:flex-row xl:flex-row md:flex-row lg:flex-row flex-col gap-6 w-full">
+      <section className="flex 2xl:flex-row xl:flex-row md:flex-col lg:flex-col flex-col gap-6 w-full">
 
         <div className="flex-grow w-full mt-5 2xl:p-5 xl:p-5 md:p-5 lg:p-5 p-2">
           <div className="flex justify-center">
@@ -149,7 +149,7 @@ export default function Signup() {
           </div>
         </div>
         <div className="w-full">
-          <Image src={assets.register__image} alt="" className="w-full 2xl:h-[900px] xl:h-[900px] md:min-h-screen lg:min-h-screen h-[500px]"/>
+          <Image src={assets.register__image} alt="" className="w-full 2xl:h-[900px] xl:h-[900px] md:h-[900px] lg:h-[900px] h-[500px]"/>
         </div>
       </section>
     </>

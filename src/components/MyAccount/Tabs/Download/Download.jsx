@@ -4,32 +4,27 @@ import React, { useState } from "react";
 
 export default function Download() {
   const [showDownload, setshowDownload] = useState(false);
- 
+
   return (
     <div>
-      <small>
+      <small className="text-center">
         The following addresses will be used on the checkout page by default.
       </small>
- 
-      
- <div className="bg-[#3330500D] h-16 pr-4 mt-5">
-          <div className="flex justify-between items-center h-full">
-            <div className="flex items-center pl-4 gap-3">
-              <Image
-                src={assets.second__box__icon}
-                alt=""
-                className="w-8 h-8"
-              />
-              <h1>No Download Available.</h1>
-            </div>
 
-            <button
-              className="bg-[#6B43FB] text-white text-sm px-4 py-3 font-medium tracking-wider rounded-md"
-            >
-              Browse Product
-            </button>
+      <div className="bg-[#3330500D] h-auto pr-4 py-3 mt-5">
+        <div className="flex flex-wrap justify-between items-center h-full">
+          <div className="flex items-center pl-4 gap-3">
+            <Image src={assets.second__box__icon} alt="" className="w-8 h-8" />
+            <h1 className="2xl:text-base xl:text-base md:text-base lg:text-base text-xs">
+              No Download Available.
+            </h1>
           </div>
+
+          <button className="bg-[#6B43FB] text-white text-sm px-4 py-3 font-medium tracking-wider rounded-md">
+            Browse Product
+          </button>
         </div>
+      </div>
       {showDownload ? (
         <div class="relative overflow-x-auto mt-5">
           <h2 className="text-xl">Download Details</h2>

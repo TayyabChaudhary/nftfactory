@@ -62,7 +62,7 @@ export default function Address() {
             <div>
               <label
                 for="first_name"
-                className="block mb-2 text-sm font-medium text-gray-900 outline-none"
+                className="block mb-2 text-sm font-medium text-gray-900 outline-none w-full"
               >
                 First Name
               </label>

@@ -12,17 +12,17 @@ export default function OrderDetails() {
   };
   return (
     <>
-      <h2 className="text-2xl mb-6">Order Details</h2>
+      <h2 className="2xl:text-2xl xl:text-2xl md:text-2xl lg:text-2xl text-xs mb-6">Order Details</h2>
       {first ? (
-        <div className="bg-[#3330500D] h-16 pr-4">
-          <div className="flex justify-between items-center h-full">
+        <div className="bg-[#3330500D] h-auto py-3 pr-4">
+          <div className="flex gap-3 flex-wrap justify-between items-center h-full">
             <div className="flex items-center pl-4 gap-3">
               <Image
                 src={assets.second__box__icon}
                 alt=""
                 className="w-8 h-8"
               />
-              <h1>No Order has been made yet.</h1>
+              <h1 className="2xl:text-base xl:text-base md:text-base lg:text-base text-xs">No Order has been made yet.</h1>
             </div>
 
             <button
@@ -66,7 +66,7 @@ export default function OrderDetails() {
                 <td class="px-6 py-4 text-red-600">Cancelled</td>
                 <td class="px-6 py-4">$125</td>
                 <td class="px-6 py-4">
-                  <button className="text-white text-sm bg-[#6B43FB] rounded-lg px-4 py-2 tracking-wider">
+                  <button className="text-white text-sm bg-[#6B43FB] rounded-lg px-0 w-32 py-2 tracking-wider">
                     View Details
                   </button>
                 </td>
@@ -82,7 +82,7 @@ export default function OrderDetails() {
                 <td class="px-6 py-4 text-green-500">Completed</td>
                 <td class="px-6 py-4">$125</td>
                 <td class="px-6 py-4">
-                  <button className="text-white text-sm bg-[#6B43FB] rounded-lg px-4 py-2 tracking-wider">
+                  <button className="text-white text-sm bg-[#6B43FB] rounded-lg w-32 py-2 tracking-wider">
                     View Details
                   </button>
                 </td>
@@ -98,7 +98,7 @@ export default function OrderDetails() {
                 <td class="px-6 py-4 text-yellow-400">Processsing</td>
                 <td class="px-6 py-4">$125</td>
                 <td class="px-6 py-4">
-                  <button className="text-white text-sm bg-[#6B43FB] rounded-lg px-4 py-2 tracking-wider">
+                  <button className="text-white text-sm bg-[#6B43FB] rounded-lg w-32 py-2 tracking-wider">
                     View Details
                   </button>
                 </td>

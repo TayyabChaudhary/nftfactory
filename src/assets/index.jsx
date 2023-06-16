@@ -15,7 +15,7 @@ import SecondBoxIcon from "./images/svg/box2.svg";
 import AddIcon from "./images/svg/add.svg";
 import ProfilesIcon from "./images/svg/profiles.svg";
 import CraditIcon from "./images/svg/cradit.svg";
-
+import MenuBar from "./images/others/menu.png";
 const assets = {
     'login__image': LoginPoster,
     'register__image':RegisterPoster,
@@ -33,7 +33,8 @@ const assets = {
     'second__box__icon': SecondBoxIcon,
     'add__icon': AddIcon,
     'profile_blue':ProfilesIcon,
-    'cradit__icon':CraditIcon
+    'cradit__icon':CraditIcon,
+    'menu__bar': MenuBar
 }
 
 
